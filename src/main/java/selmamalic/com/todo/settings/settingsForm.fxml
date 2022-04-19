@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #f8bbd0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.selmamalic.com.todo.settings.SettingsForm">
+   <children>
+      <AnchorPane layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="700.0" style="-fx-background-color: #ffffff; -fx-border-width: 3 0  0 0; -fx-border-color: #bf5f82;">
+         <children>
+            <AnchorPane layoutX="12.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="676.0" style="-fx-border-color: #bf5f82; -fx-border-insets: 6 6 2 6; -fx-border-width: 4 4 4 4; -fx-border-radius: 10 10 10 10; -fx-background-color: #ffeeff;">
+               <children>
+                  <JFXButton fx:id="updateDataBtn" alignment="CENTER" graphicTextGap="20.0" layoutX="72.0" layoutY="323.0" onAction="#saveUpdatedData" prefHeight="31.0" prefWidth="241.0" style="-fx-background-color: #616161;" text="Update data" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <Label alignment="TOP_CENTER" layoutX="18.0" layoutY="-4.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #ffeeff;" text="Update account">
+                     <font>
+                        <Font name="Monotype Corsiva" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="firstNameTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="72.0" layoutY="42.0" prefHeight="36.0" prefWidth="241.0" promptText="First name" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lastNameTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="72.0" layoutY="96.0" prefHeight="36.0" prefWidth="241.0" promptText="Last name" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="userNameTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="72.0" layoutY="153.0" prefHeight="36.0" prefWidth="241.0" promptText="User name" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="addressTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="72.0" layoutY="209.0" prefHeight="36.0" prefWidth="241.0" promptText="Address" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="passwordTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="410.0" layoutY="107.0" prefHeight="36.0" prefWidth="226.0" promptText="Password" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="confirmPasswordTxt" alignment="CENTER" focusColor="#bf5f82" layoutX="410.0" layoutY="166.0" prefHeight="36.0" prefWidth="226.0" promptText="Confirm password" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="backBtn" alignment="CENTER" graphicTextGap="20.0" layoutX="406.0" layoutY="323.0" onAction="#backToAddAndShowTasks" prefHeight="31.0" prefWidth="235.0" style="-fx-background-color: #f8bbd0;" text="Back to Tasks" textAlignment="RIGHT" textFill="#424242">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <JFXCheckBox fx:id="maleCheckBox" checkedColor="#bf5f82" layoutX="101.0" layoutY="275.0" text="Male" unCheckedColor="BLACK" />
+                  <JFXCheckBox fx:id="femaleCheckBox" checkedColor="#bf5f82" layoutX="212.0" layoutY="275.0" text="Female" unCheckedColor="BLACK" />
+                  <JFXButton fx:id="changePasswordBtn" alignment="CENTER" graphicTextGap="20.0" layoutX="406.0" layoutY="245.0" onAction="#changePassword" prefHeight="31.0" prefWidth="235.0" style="-fx-background-color: #616161;" text="Change password" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <Line endX="272.385986328125" endY="-12.048320770263672" layoutX="217.0" layoutY="149.0" rotate="-90.0" startX="10.694767951965332" startY="-8.584237098693848" stroke="#bf5f82" strokeWidth="4.0" />
+                  <ImageView fitHeight="64.0" fitWidth="70.0" layoutX="491.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/password.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="deleteAccountBtn1" alignment="CENTER" graphicTextGap="20.0" layoutX="406.0" layoutY="284.0" onAction="#deleteAccount" prefHeight="31.0" prefWidth="235.0" style="-fx-background-color: #616161;" text="Delete account" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label alignment="TOP_CENTER" layoutX="190.0" layoutY="17.0" prefHeight="64.0" prefWidth="321.0" text="Account Settings">
+         <font>
+            <Font name="Monotype Corsiva" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="72.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="547.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

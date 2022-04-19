@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="cellRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="58.0" prefWidth="291.0" style="-fx-background-color: #f8bbd0; -fx-border-color: #bf5f82; -fx-border-width: 2 2 2 2;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <Label fx:id="cellLabel" alignment="CENTER" layoutX="34.0" layoutY="6.0" prefHeight="47.0" prefWidth="220.0" style="-fx-background-color: #ffffff;" />
+   <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="4.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../icons/icons8-aufgabenplanung-64.png" />
+   </ImageView>
+   <ImageView fx:id="updateImg" fitHeight="29.0" fitWidth="29.0" layoutX="259.0" layoutY="3.0"  pickOnBounds="true" preserveRatio="true">
+      <Image url="@../icons/icons8-eigenschaft-bearbeiten-64.png" />
+   </ImageView>
+   <ImageView fx:id="deleteImg" fitHeight="18.0" fitWidth="19.0" layoutX="259.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../icons/icons8-löschen-64.png" />
+   </ImageView>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #f8bbd0;"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.java.selmamalic.com.todo.login.Login">
+   <children>
+      <AnchorPane fx:id="signupAndExitPane" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="700.0" style="-fx-border-width: 3 0  0 0; -fx-background-color: #ffffff; -fx-border-color: #bf5f82;">
+         <children>
+            <AnchorPane fx:id="loginPane" layoutX="247.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="447.0" style="-fx-border-color: #bf5f82; -fx-border-insets: 10 6 2 6; -fx-border-width: 4 4 4 4; -fx-border-radius: 10 10 10 10; -fx-background-color: #ffeeff;">
+               <children>
+                  <JFXButton fx:id="loginBtn" alignment="CENTER" graphicTextGap="20.0" layoutX="109.0" layoutY="294.0" onAction="#login" prefHeight="36.0" prefWidth="168.0" style="-fx-background-color: #c48b9f;" text="Sign in" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Comic Sans MS" size="17.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/login1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="usernameFld" layoutX="79.0" layoutY="149.0" prefHeight="39.0" prefWidth="290.0" promptText="Enter a username " />
+                  <JFXPasswordField fx:id="passwordFld" layoutX="79.0" layoutY="215.0" prefHeight="39.0" prefWidth="290.0" promptText="Enter the password" />
+                  <ImageView fitHeight="82.0" fitWidth="79.0" layoutX="237.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/password.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="TOP_CENTER" layoutX="18.0" layoutY="4.0" prefHeight="32.0" prefWidth="128.0" style="-fx-background-color: #ffeeff;" text="Login page">
+                     <font>
+                        <Font name="Monotype Corsiva" size="17.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <ImageView fitHeight="208.0" fitWidth="182.0" layoutX="45.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/todo_lisst_200px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="exitBtn" layoutX="63.0" layoutY="324.0" onAction="#exit" prefHeight="32.0" prefWidth="147.0" style="-fx-background-color: #c48b9f;" text="Exit">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="55.0" layoutY="210.0" prefHeight="17.0" prefWidth="182.0" text="Still don't have an account?">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="55.0" layoutY="235.0" prefHeight="17.0" prefWidth="182.0" text="Then create one!">
+               <font>
+                  <Font name="Times New Roman Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="signupBtn" layoutX="65.0" layoutY="267.0" onAction="#signup" prefHeight="32.0" prefWidth="147.0" style="-fx-background-color: #c48b9f;" text="Sign up">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="212.0" layoutY="14.0" prefHeight="60.0" prefWidth="276.0" text="To do">
+         <font>
+            <Font name="Monotype Corsiva" size="54.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="87.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="565.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

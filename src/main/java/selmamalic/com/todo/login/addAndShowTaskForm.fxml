@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1000.0"
+            style="-fx-background-color: #f8bbd0;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.selmamalic.com.todo.login.AddAndShowTaskForm">
+   <children>
+      <AnchorPane layoutY="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="1000.0"
+                  style="-fx-background-color: #ffffff; -fx-border-width: 3 0  0 0;">
+         <children>
+            <AnchorPane fx:id="createTaskPane" layoutX="16.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="373.0" style="-fx-border-color: #bf5f82; -fx-border-insets: 10 6 2 6; -fx-border-width: 4 4 4 4; -fx-border-radius: 10 10 10 10; -fx-background-color: #ffeeff;">
+               <children>
+                  <JFXButton fx:id="saveTaskBtn" alignment="CENTER" graphicTextGap="20.0" layoutX="35.0" layoutY="392.0" onAction="#saveTask" prefHeight="43.0" prefWidth="304.0" style="-fx-background-color: #616161;" text="Save task" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Comic Sans MS Bold Italic" size="14.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+                  <Label alignment="TOP_CENTER" layoutX="18.0" layoutY="4.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #ffeeff;" text="Create task">
+                     <font>
+                        <Font name="Monotype Corsiva" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="shortDescriptionFld" focusColor="#bf5f82" layoutX="35.0" layoutY="129.0" prefHeight="127.0" prefWidth="304.0" promptText="Short description" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="27.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXTextField fx:id="taskNameFld" focusColor="#bf5f82" layoutX="35.0" layoutY="62.0" prefHeight="45.0" prefWidth="304.0" promptText="Task name" unFocusColor="BLACK">
+                     <font>
+                        <Font name="Monotype Corsiva" size="26.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXDatePicker fx:id="chooseDayPicker" defaultColor="#bf5f82" layoutX="35.0" layoutY="299.0" prefHeight="36.0" prefWidth="304.0" promptText="Choose date" />
+                  <Label fx:id="taskSavedOrNotLabel" alignment="CENTER" layoutX="28.0" layoutY="449.0" prefHeight="43.0" prefWidth="304.0">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="MyTasksPane" layoutX="398.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                        prefHeight="513.0" prefWidth="602.0" style="-fx-border-color: #bf5f82; -fx-border-insets: 10 6 2 6; -fx-border-width: 4 4 4 4; -fx-border-radius: 10 10 10 10; -fx-background-color: #ffeeff;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="18.0" layoutY="4.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #ffeeff;" text="My tasks">
+                     <font>
+                        <Font name="Monotype Corsiva" size="17.0" />
+                     </font>
+                  </Label>
+                  <JFXListView fx:id="tasksList" layoutX="15.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="338.0" style="-fx-background-color: #ffffff;" />
+                  <JFXTextArea fx:id="tasksShortDescriptionTextBox" editable="false" focusColor="WHITE" layoutX="354.0" layoutY="64.0" prefHeight="364.0" prefWidth="235.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+                  <JFXToolbar fx:id="tollbar" layoutX="14.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="577.0" style="-fx-background-color: #ffffff;">
+                     <left>
+                        <JFXToggleButton fx:id="todaysTasksToggleBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#getTodaysTasks" prefHeight="35.0" prefWidth="115.0" size="4.0" text="Today's tasks" toggleColor="#bf5f82" toggleLineColor="#f8bbd0" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="Comic Sans MS" size="10.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </left>
+                     <right>
+                        <JFXButton fx:id="refreshBtn" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" graphicTextGap="3.0" onAction="#refreshList" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #ffffff;" text=" " BorderPane.alignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icons/refresh.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </right>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </JFXToolbar>
+                  <Label fx:id="dateLbl" alignment="CENTER" layoutX="355.0" layoutY="429.0" prefHeight="70.0" prefWidth="235.0" style="-fx-background-color: #ffffff;">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="52.0" prefWidth="1000.0" style="-fx-background-color: #bf5f82;">
+               <left>
+                  <JFXButton fx:id="settingsBtn" alignment="CENTER" graphicTextGap="20.0" onAction="#settings" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: #616161;" text="Settings" textAlignment="RIGHT" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+               </left>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+               <right>
+                  <JFXButton fx:id="logoutBtn" alignment="CENTER" graphicTextGap="20.0" onAction="#backToTheLoginPage" prefHeight="32.0" prefWidth="146.0" style="-fx-background-color: #616161;" text="Logout" textAlignment="RIGHT" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Comic Sans MS Bold" size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </JFXButton>
+               </right>
+               <center>
+                  <Label fx:id="helloLabel" alignment="CENTER" prefHeight="44.0" prefWidth="305.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Monotype Corsiva" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Label>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <Label alignment="TOP_CENTER" layoutX="376.0" layoutY="14.0" prefHeight="57.0" prefWidth="278.0" text="To do">
+         <font>
+            <Font name="Monotype Corsiva" size="50.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="862.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/heart.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
